@@ -1,0 +1,29 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">View Message</h1>
+    <div class="buttons">
+      <button class="button icon-left ion-home" ng-click="closeViewMsg()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form name ="myForm" ng-submit="viewMsg()">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Username</span>
+          <input name="username" type="text" ng-model="messageData.username" required>
+        </label>
+        <label class="item item-input">
+          <span  class="input-label">Message Id</span>
+          <input name =id type="text" ng-model="messageData.id" required>
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit">View</button>
+        </label>
+      </div>
+	  <div class="padding">
+            <p ng-show="myForm.username.$error.required">* Username is required</p>
+			<p ng-show="myForm.id.$error.required">* ID is required</p>
+		</div>
+    </form>
+  </ion-content>
+</ion-modal-view>

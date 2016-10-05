@@ -1,0 +1,29 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Store Message</h1>
+    <div class="buttons">
+      <button class="button icon-left ion-home" ng-click="closeLogin()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form name ="myForm" ng-submit="doLogin()">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Username</span>
+          <input type="text" name="username" ng-model="loginData.username" required>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Message</span>
+          <input type="text" name="message" ng-model="loginData.message" required>
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit">Save</button>
+        </label>
+      </div>
+	  <div class="padding">
+            <p ng-show="myForm.username.$error.required">* Username is required</p>
+			<p ng-show="myForm.message.$error.required">* Message is required</p>
+		</div>
+    </form>
+  </ion-content>
+</ion-modal-view>
