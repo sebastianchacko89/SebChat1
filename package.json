@@ -15,6 +15,6 @@
     "shelljs": "^0.3.0"
   },
   "scripts": {
-  	"start": "ionic serve --address 52.90.241.80 -p 80"
+  	"start": "ionic serve --address 172.31.26.72 -p 80"
   }
 }
